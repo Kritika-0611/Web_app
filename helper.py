@@ -41,11 +41,15 @@ def country_year_list(df):
 
     return years,country
 
-def data_over_time(df,col):
+def data_over_time(df, col):
+    # Group by 'Year' and count the unique values in the specified column
+    data = df.groupby('Year')[col].nunique().reset_index()
+    # Rename columns for clarity
+    data.rename(columns={'Year': 'Edition'}, inplace=True)
+    return data
 
-    nations_over_time = df.drop_duplicates(['Year', col])['Year'].value_counts().reset_index()
-    nations_over_time.rename(columns={'index': 'Edition', 'Year': col}, inplace=True)
-    return nations_over_time
+
+
 
 
 def most_successful(df, sport):
