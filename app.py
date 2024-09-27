@@ -68,6 +68,8 @@ if user_menu == 'Overall Analysis':
         st.header("Athletes")
         st.title(athletes)
 
+    
+
     nations_over_time = helper.data_over_time(df,'region')
     fig = px.line(nations_over_time, x="Edition", y="region")
     st.title("Participating Nations over the years")
@@ -173,7 +175,7 @@ sport_list.sort()
 sport_list.insert(0, 'Overall')
 
 st.title('Height Vs Weight')
-selected_sport = st.selectbox('Select a Sport', sport_list)
+selected_sport = st.selectbox('Select a Sport', sport_list, key='overall_sport_selectbox')
 temp_df = weight_v_height(df, selected_sport)
 
 # Create the scatter plot with correct parameters
