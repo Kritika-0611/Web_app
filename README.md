@@ -1,21 +1,26 @@
-# Web_app
-Olympics_analyser model link:
-https://kritika.streamlit.app/
-In this project, we analyze historical Olympic data using Python for insights and predictions. The analysis is focused on identifying trends in medal distribution, athlete performance, country-specific results, and event-wise participation. The entire analysis is made interactive and accessible through a Streamlit web app.
+# Olympics Data Analyser
 
-Exploratory Data Analysis (EDA):
+An interactive web application built with Streamlit to analyze historical Olympic Games data.
 
-Visualize medal tallies over different years and countries.
-Analyze athlete performance based on age, gender, and participation in different sports.
-Identify top-performing countries and events over time.
+## Features
+- Medal tallies by year, country, and athlete
+- Trends in sports participation over the years
+- Gender-based participation analysis
+- Dynamic filtering and visual insights
 
-Streamlit Deployment:
+## Tech Stack
+- Python
+- Streamlit
+- Pandas, Matplotlib, Seaborn
 
-Streamlit is used to build an interactive web interface, allowing users to:
-Explore medal tally data with filtering options by year or country.
-View dynamic visualizations of athlete and country performances.
-Compare countries or athletes based on historical data.
-Access predictions for future Olympic medal distributions.
-Deployment: The app can be hosted on Streamlit Cloud or other hosting platforms for easy access and interaction.
-This project delivers a comprehensive analysis of Olympic data, made accessible and interactive through a user-friendly web app powered by Streamlit.
+## Project Structure
+- `main.py` - Streamlit UI and control flow
+- `helper.py` - Modular data processing functions
+- `data/` - Cleaned Olympic history dataset
 
+## Status
+- Fully functional web app
+- Designed for deployment with environment separation
+
+## Dataset
+- Source: [Kaggle - Olympic History Dataset](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
